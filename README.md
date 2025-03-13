@@ -10,7 +10,7 @@ based on [Kivy](https://kivy.org/).
 
 ## Requirements
 
-- Python 3.11
+- Python 3.12
 - Kivy 2.3
 
 ## How to run the calculator
