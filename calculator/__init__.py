@@ -23,6 +23,9 @@ class Calculator:
         value = self._ensure_is_digit(value)
         self._append(value)
 
+    def power(self):
+        self._append("**")
+
     def open_parenthesis(self):
         self._append("(")
     
