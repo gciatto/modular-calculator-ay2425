@@ -37,6 +37,9 @@ class Calculator:
 
     def dot(self):
         self._append(".")
+
+    def square_root(self):
+        self._append("** 0.5")
     
     def compute_result(self) -> Number:
         try:
