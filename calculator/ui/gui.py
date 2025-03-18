@@ -10,7 +10,7 @@ BUTTONS_NAMES = [
     ['4', '5', '6', '*'],
     ['1', '2', '3', '-'],
     ['.', '0', '=', '+'],
-    ["(", ")"]
+    ["(", ")", 'R', '√']
 ]
 
 
@@ -40,6 +40,12 @@ class CalculatorApp(App):
             case ")":
                 self._calc.close_parenthesis()
                 self._display.text = self._calc.expression
+            case "√":
+                self._calc.square_root()
+                self._display.text = self._calc.expression
+            case "R":
+                self._calc.reset()
+                self._display.text = "0"
             case "=":
                 try:
                     result = self._calc.compute_result()

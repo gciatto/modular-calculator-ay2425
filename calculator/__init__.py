@@ -15,6 +15,9 @@ class Calculator:
 
     def _append(self, value):
         self.expression += str(value)
+
+    def reset(self):
+        self.expression = ""
     
     def digit(self, value: int | str):
         value = self._ensure_is_digit(value)
@@ -40,6 +43,9 @@ class Calculator:
 
     def dot(self):
         self._append(".")
+
+    def square_root(self):
+        self._append("** 0.5")
     
     def compute_result(self) -> Number:
         try:
