@@ -10,6 +10,7 @@ BUTTONS_NAMES = [
     ['4', '5', '6', '*'],
     ['1', '2', '3', '-'],
     ['.', '0', '=', '+'],
+    ["(", ")"]
 ]
 
 
@@ -33,6 +34,12 @@ class CalculatorApp(App):
 
     def on_button_press(self, button):
         match button.text:
+            case "(":
+                self._calc.open_parenthesis()
+                self._display.text = self._calc.expression
+            case ")":
+                self._calc.close_parenthesis()
+                self._display.text = self._calc.expression
             case "=":
                 try:
                     result = self._calc.compute_result()
